@@ -17,6 +17,8 @@ apt install wget unzip -y
 # Let's add a user for ProfitTrailer
 useradd -m -s /bin/bash profittrailer
 
+clear
+
 echo
 echo "Please set a password for your profittrailer user"
 echo
