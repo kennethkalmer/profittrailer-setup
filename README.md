@@ -16,18 +16,51 @@ This will install git and clone this repo to the directory you're in.
 
 ```sh
 $ cd profittrailer-setup
-$ ./01_setup.sh
+$ sudo ./01_setup.sh
 ```
 
 This script will update your system and install Java 8 for you. It also creates a `profittrailer` user.
 
 ## Step 2 - Install pm2
 
+[pm2](http://pm2.io) is a process manager that you can use to keep your ProfitTrailer instances up and running always. The authors of ProfitTrailer provide a sensible default pm2 configuration right there in the zip file...
+
+Setting up pm2 is a multi-step process, just follow along:
+
+### Install pm2 itself
 
 ```sh
 $ cd profittrailer-setup
 $ ./02_pm2.sh
 ```
+
+### Setup pm2 to start up with your system
+
+This is important! When your server gets rebooted, you need to ensure pm2 starts up, so it in turn can start all your ProfitTrailer instances.
+
+This command you need to run as the `profittrailer` user that got created in the our first step.
+
+So lets switch to the `profittrailer` user
+
+```sh
+$ su - profittrailer
+```
+
+No we need to run this command to get instructions on how to setup pm2 to start when the server starts.
+
+```sh
+$ pm2 startup
+```
+
+It is important to get the command to run from the instructions that got printed above. Then _exit_ the profittrailer user to get back to your main user.
+
+```sh
+$ exit
+$
+```
+
+Now paste the command that was provided by the `pm2 startup` output.
+
 
 ## Step 3 - Install Apache & certbot for sure access
 
