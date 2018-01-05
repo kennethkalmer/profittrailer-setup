@@ -2,7 +2,7 @@
 
 Get started with ProfitTrailer on Ubuntu easily
 
-# Step 0 - Get this repo on your VPS
+## Step 0 - Get this repo on your VPS
 
 Either download this repo or run the following command to clone it directly to your VPS
 
@@ -12,7 +12,7 @@ $ curl -sL https://github.com/kennethkalmer/profittrailer-setup/raw/master/00_do
 
 This will install git and clone this repo to the directory you're in.
 
-# Step 1 - Install Java and create a `profittrailer` user
+## Step 1 - Install Java and create a `profittrailer` user
 
 ```sh
 $ cd profittrailer-setup
@@ -21,7 +21,7 @@ $ ./01_setup.sh
 
 This script will update your system and install Java 8 for you. It also creates a `profittrailer` user.
 
-# Step 2 - Install pm2
+## Step 2 - Install pm2
 
 
 ```sh
@@ -29,7 +29,7 @@ $ cd profittrailer-setup
 $ ./02_pm2.sh
 ```
 
-# Step 3 - Install Apache & certbot for sure access
+## Step 3 - Install Apache & certbot for sure access
 
 
 ```sh
@@ -41,7 +41,7 @@ $ ./03_apache.sh
 
 _Document this_
 
-# Step 5 - Setup secure access to your bot
+## Step 5 - Setup secure access to your bot
 
 
 ```sh
