@@ -21,3 +21,5 @@ cat site-template.conf | \
 a2ensite ${SERVER_NAME}
 
 service apache2 reload
+
+certbot --apache -d ${SERVER_NAME}
