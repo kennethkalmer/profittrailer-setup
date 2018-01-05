@@ -15,7 +15,7 @@ apt install oracle-java8-installer -y
 apt install wget unzip -y
 
 # Let's add a user for ProfitTrailer
-useradd -m profittrailer
+useradd -m -s /bin/bash profittrailer
 
 echo
 echo "Please set a password for your profittrailer user"
