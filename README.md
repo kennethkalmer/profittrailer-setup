@@ -56,11 +56,24 @@ It is important to get the command to run from the instructions that got printed
 
 ```sh
 $ exit
-$
 ```
 
 Now paste the command that was provided by the `pm2 startup` output.
 
+#### Example of what this looks like:
+
+This might change with future versions of pm2, but this might help you understand what to expect:
+
+```sh
+root@localhost:~/profittrailer-setup# su - profittrailer
+profittrailer@localhost:~$ pm2 startup
+[PM2] Init System found: systemd
+[PM2] To setup the Startup Script, copy/paste the following command:
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u profittrailer —hp /home/profittrailer
+profittrailer@localhost:~$ exit
+logout
+root@localhost:~/profittrailer-setup# sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u profittrailer —hp /home/profittrailer
+```
 
 ## Step 3 - Install Apache & certbot for sure access
 
