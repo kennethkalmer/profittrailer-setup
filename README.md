@@ -12,6 +12,8 @@ $ curl -sL https://github.com/kennethkalmer/profittrailer-setup/raw/master/00_do
 
 This will install git and clone this repo to the directory you're in.
 
+Then copy `config-sample.sh` to `config.sh` in the `profittrailer-setup` directory, and review the available settings.
+
 ## Step 1 - Install Java and create a `profittrailer` user
 
 ```sh
