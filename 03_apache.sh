@@ -14,6 +14,9 @@ apt install apache2 python-certbot-apache -y
 a2enmod proxy
 a2enmod proxy_http
 
+# Restart apache
+service apache2 restart
+
 # Enable certbot to update certs daily
 if [ -d /etc/cron.d ]; then
   echo "Installing cron entry to run certbot twice daily"
