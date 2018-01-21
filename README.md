@@ -14,6 +14,15 @@ This will install git and clone this repo to the directory you're in.
 
 Then copy `config-sample.sh` to `config.sh` in the `profittrailer-setup` directory, and review the available settings.
 
+### Updating existing repo
+
+You might have done this before, and I might have made some improvements and fixes since, so we need to get you updated:
+
+```sh
+$ cd profittrailer-setup
+$ git pull
+```
+
 ## Step 1 - Install Java and create a `profittrailer` user
 
 ```sh
