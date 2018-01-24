@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+[ ! -z "${DEBUG}" ] && set -x
+
 # Where our tooling is
 TOOL_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd  )
 export TOOL_DIR
