@@ -3,6 +3,12 @@
 set -e
 [ ! -z "${DEBUG}" ] && set -x
 
+# Where our tooling is
+TOOL_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd  )
+export TOOL_DIR
+source "${TOOL_DIR}/config.sh"
+
+
 SERVER_NAME=$1
 PORT=$2
 
