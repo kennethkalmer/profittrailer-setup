@@ -46,10 +46,8 @@ if [ ! -z "${CERTBOT_CONTACT}" ]; then
   CERTBOT_MAIL="-m ${CERTBOT_CONTACT}"
 fi
 
-certbot --authenticator standalone \
-  --installer apache \
+certbot --apache \
   -d "${SERVER_NAME}" \
-  --pre-hook "service apache2 stop" \
-  --post-hook "service apache2 start" \
   "${CERTBOT_MAIL}" \
-  --redirect
+  --redirect \
+  --agree-tos
